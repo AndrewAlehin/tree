@@ -20,13 +20,13 @@ public class Html {
         this.repository = repository;
     }
 
-    public void get() {
+    public void create() {
         List<Objects> list = repository.getAll();
         StringBuilder html = new StringBuilder();
-        getHtml(getTree(getRootElement(list), list, html), getStat(list));
+        createHtml(getTree(getRootElement(list), list, html), getStat(list));
     }
 
-    private void getHtml(StringBuilder tree, StringBuilder stat) {
+    private void createHtml(StringBuilder tree, StringBuilder stat) {
         File htmlTemplateFile = new File(System.getProperty("user.dir") + "\\src\\main\\resources\\static\\temple.html");
         try {
             String htmlString = FileUtils.readFileToString(htmlTemplateFile);

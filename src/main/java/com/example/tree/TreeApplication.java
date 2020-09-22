@@ -6,6 +6,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class TreeApplication {
     public static void main(String[] args) {
-        SpringApplication.run(TreeApplication.class, args).getBean(Html.class).get();
+        SpringApplication.run(TreeApplication.class, args).getBean(Html.class).create();
     }
 }
